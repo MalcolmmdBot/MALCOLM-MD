@@ -1,4 +1,127 @@
 
+async function searchAnime(title) {
+  const query = `
+    query ($search: String) {
+      Page(page: 1, perPage: 5) {
+        media(search: $search, type: ANIME) {
+          title {
+            romaji
+            english
+          }
+          episodes
+          status
+          averageScore
+          siteUrl
+        }
+      }
+    }
+  `;
+
+  const response = await fetch(
+    "https://graphql.anilist.co",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        query,
+        variables: { search: title }
+      })
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Anime API request failed");
+  }
+
+  const data = await response.json();
+  return data.data.Page.media;
+}
+con
+async function searchAnime(title) {
+  const query = `
+    query ($search: String) {
+      Page(page: 1, perPage: 5) {
+        media(search: $search, type: ANIME) {
+          title {
+            romaji
+            english
+          }
+          episodes
+          status
+          averageScore
+          siteUrl
+        }
+      }
+    }
+  `;
+
+  const response = await fetch(
+    "https://graphql.anilist.co",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        query,
+        variables: { search: title }
+      })
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Anime API request failed");
+  }
+
+  const data = await response.json();
+  return data.data.Page.media;
+}
+
+async function searchAnime(title) {
+  const query = `
+    query ($search: String) {
+      Page(page: 1, perPage: 5) {
+        media(search: $search, type: ANIME) {
+          title {
+            romaji
+            english
+          }
+          episodes
+          status
+          averageScore
+          siteUrl
+        }
+      }
+    }
+  `;
+
+  const response = await fetch(
+    "https://graphql.anilist.co",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        query,
+        variables: { search: title }
+      })
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error("Anime API request failed");
+  }
+
+  const data = await response.json();
+  return data.data.Page.media;
+}
+
 const {
   default: makeWASocket,
   useMultiFileAuthState,
