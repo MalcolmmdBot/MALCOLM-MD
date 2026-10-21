@@ -1,7 +1,10 @@
-{"name":"malcolm-MD",
+{
+"name":"malcolm-MD",
 "version":"1.0.0",
 "description":"MALCOLM-MD WhatsApp Bot",
 "main":"index.js",
-"script": {
-"start":"node index. js"},
-"dependencies":{} }
+"scripts": {
+"start":"node index. js"
+},
+"dependencies":{} 
+}
