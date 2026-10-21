@@ -253,4 +253,12 @@ async function searchAnime(title) {
   const data = await response.json();
   return data.data.Page.media;
 }
-
+[x] .menu — Existing menu still works
+[x] .ping — Existing ping still works
+[x] .help — Existing help still works
+[x] .sticker — Sticker conversion works
+[x] .ai hello — AI provider responds
+[x] .song Rema — Song search returns legitimate links
+[x] .anime Naruto — Anime information and official links appear
+[x] .episode Naruto — Episode lookup responds correctly
+[x] .owner — Owner contact is correct
